@@ -1,5 +1,5 @@
-export default function Die({value}) {
+export default function Die({value, isHeld, hold, id}) {
     return (
-        <button className="die">{value}</button>
+        <button className={isHeld ? "isHeld" : "notHeld"} onClick={() => hold(id)} >{value}</button>
     )
 }
